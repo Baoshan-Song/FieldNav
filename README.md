@@ -22,8 +22,8 @@ This repository provides raw and processed multi-sensor data collected by an aut
 | **GNSS Rover** | u-blox ZED-F9P | RINEX 3.0x (`.24O`) |
 | **GNSS Base** | HKSC (Hong Kong SatRef Base Station) | RINEX 3.0x (`.24O`) |
 | **Ephemeris** | Multi-GNSS Broadcast Ephemeris | RINEX 3.0x (`.rnx`) |
-| **IMU** | Xsens MTi-300 | ROS Bag (`.bag`) |
-| **Wheel Odometer** | Agilex Scout-Mini | ROS Bag (`.bag`) |
+| **IMU** | Xsens MTi-300 | ASCII (`.txt`) |
+| **Wheel Odometer** | Agilex Scout-Mini | ASCII (`.txt`) |
 | **Ground Truth** | High-precision RTK/INS Reference | `.kmz` / `.txt` |
 
 ---
@@ -42,7 +42,7 @@ FieldNav-Dataset/
 │   └── ephemeris/                              # Broadcast ephemeris file
 │       └── BRDM00DLR_S_20243090000_01D_MN.rnx
 ├── imu_odometer/                                # Synchronized IMU + Wheel Odometer
-│   └── 2024-11-04-12-06-19.bag                 # ROS Bag containing Xsens MTi-300 & Scout-Mini
+│   └── imu_odometer_GNSSpos.txt                 # Raw measurements containing Xsens MTi-300 & Scout-Mini
 └── ground_truth/                               # Reference trajectory
     ├── groundtruth.kmz                         # Visualization file for Google Earth
     └── groundtruth.txt                         # Time-stamped 6-DoF state reference
